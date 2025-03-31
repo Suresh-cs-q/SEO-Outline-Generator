@@ -12,6 +12,9 @@ A modern React application that helps content creators and marketers generate SE
 - 🖨️ Print functionality
 - 🎭 Error handling and input validation
 - 📱 Fully responsive design
+- 🔄 Real-time outline generation
+- 📊 Keyword density analysis
+- 📝 Topic cluster suggestions
 
 ## Tech Stack
 
@@ -19,6 +22,8 @@ A modern React application that helps content creators and marketers generate SE
 - Material-UI (MUI)
 - Vite
 - ESLint
+- Axios (for API calls)
+- React Router (for navigation)
 
 ## Prerequisites
 
@@ -32,13 +37,13 @@ Before you begin, ensure you have installed:
 1. Clone the repository:
 
 ```bash
-git clone [your-repository-url]
+git clone https://github.com/Suresh-cs-q/SEO-Outline-Generator.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd k
+cd SEO-Outline-Generator
 ```
 
 3. Install dependencies:
@@ -49,7 +54,13 @@ npm install
 yarn install
 ```
 
-4. Start the development server:
+4. Create a `.env` file from the template:
+
+```bash
+cp .env.example .env
+```
+
+5. Start the development server:
 
 ```bash
 npm run dev
@@ -68,15 +79,17 @@ The application will be available at `http://localhost:5173` (or another port if
    - Copy the outline to clipboard
    - Download the outline as a text file
    - Print the outline
+   - View keyword density analysis
+   - Get topic cluster suggestions
 
 ## Project Structure
 
 ```
-k/
+SEO-Outline-Generator/
 ├── public/
+│   └── vite.svg
 ├── src/
 │   ├── assets/
-│   │   └── images/
 │   ├── components/
 │   │   ├── Footer/
 │   │   └── Navbar/
@@ -85,18 +98,34 @@ k/
 │   │   ├── About/
 │   │   └── Home/
 │   ├── services/
+│   │   └── apiService.js
 │   ├── utils/
 │   ├── App.jsx
 │   ├── App.css
 │   ├── main.jsx
 │   └── index.css
+├── .env.example
 ├── package.json
 └── vite.config.js
+```
+
+## Environment Variables
+
+Create a `.env` file in the root directory with the following structure:
+
+```
+VITE_API_KEY=your_api_key_here
 ```
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
@@ -107,3 +136,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Material-UI for the beautiful components
 - React.js team for the amazing framework
 - Vite for the blazing fast build tool
+- Axios for reliable API calls
+- React Router for seamless navigation
